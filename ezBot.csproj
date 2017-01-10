@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{FDD286ED-8C05-41D6-ABAE-9231A5B5B2DC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ezBot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ezBot.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6C0E49A8E8D90B1CF1DF7EDF6C2064F707A2EE38</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ezBot_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>ic_child_care_black_24dp_2x.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BananaLib.RiotObjects.Platform\TradeContractDTO.cs" />
+    <Compile Include="BananaLib\EnumExtensions.cs" />
+    <Compile Include="BananaLib\Error.cs" />
+    <Compile Include="BananaLib\ErrorType.cs" />
+    <Compile Include="BananaLib\FullNameAttribute.cs" />
+    <Compile Include="BananaLib\GameServerAddressAttribute.cs" />
+    <Compile Include="BananaLib\Garena\DataType.cs" />
+    <Compile Include="BananaLib\Garena\Label.cs" />
+    <Compile Include="BananaLib\Garena\ProtoFieldAttribute.cs" />
+    <Compile Include="BananaLib\Garena\Security.cs" />
+    <Compile Include="BananaLib\LocaleAttribute.cs" />
+    <Compile Include="BananaLib\LoginQueueAttribute.cs" />
+    <Compile Include="BananaLib\LoLClient.cs" />
+    <Compile Include="BananaLib\LoLHttpClient.cs" />
+    <Compile Include="BananaLib\LoLTypes\AllowSpectators.cs" />
+    <Compile Include="BananaLib\LoLTypes\GameMode.cs" />
+    <Compile Include="BananaLib\LoLTypes\GameType.cs" />
+    <Compile Include="BananaLib\LoLTypes\PlayerSkill.cs" />
+    <Compile Include="BananaLib\LoLTypes\QueueTypeId.cs" />
+    <Compile Include="BananaLib\LoLUtils\LoLClientGameData.cs" />
+    <Compile Include="BananaLib\LoLUtils\LoLClientImages.cs" />
+    <Compile Include="BananaLib\LoLUtils\LoLClientPath.cs" />
+    <Compile Include="BananaLib\QueueType.cs" />
+    <Compile Include="BananaLib\ReasonFailed.cs" />
+    <Compile Include="BananaLib\Region.cs" />
+    <Compile Include="BananaLib\RegionInfo.cs" />
+    <Compile Include="BananaLib\RestService\AuthResult.cs" />
+    <Compile Include="BananaLib\RestService\GasToken.cs" />
+    <Compile Include="BananaLib\RestService\InGameCredentials.cs" />
+    <Compile Include="BananaLib\RestService\IpBannedException.cs" />
+    <Compile Include="BananaLib\RestService\LoginQueue.cs" />
+    <Compile Include="BananaLib\RestService\Lqt.cs" />
+    <Compile Include="BananaLib\RestService\Ticker.cs" />
+    <Compile Include="BananaLib\RiotObjects\Exceptions\LoginFailedException.cs" />
+    <Compile Include="BananaLib\RiotObjects\Kudos\PendingKudosDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Leagues\LeagueItemDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Leagues\LeagueListDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Leagues\MiniSeriesDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AccountSummary.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AggregatedStat.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AggregatedStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AggregatedStatsKey.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AllPublicSummonerDataDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AllSummonerData.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AramPlayerParticipant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\AuthenticationCredentials.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BannedChampion.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BasePublicSummonerDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BaseSummoner.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BotParticipant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BroadcastNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\BustedLeaver.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ChampionBanInfoDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ChampionDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ChampionSkinDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ChampionStatInfo.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ClientLoginKickNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ClientSystemStatesNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Effect.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\EndOfGameStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\FailedJoinPlayer.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\FellowPlayerInfo.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameMap.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameObserver.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameParticipant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameQueueConfig.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\GameTypeConfigDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\HarassmentReport.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\InvitationRequest.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Invitee.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\InvitePrivileges.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Inviter.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ItemEffect.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\LcdsResponseString.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\LcdsServiceProxyResponse.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\LeaverPenaltyStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\LobbyStatus.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\LoginDataPacket.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\MasteryBookDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\MasteryBookPageDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\MatchingThrottleConfig.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\MatchMakerParams.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Member.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\ObfuscatedParticipant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Participant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlatformGameLifecycleDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Player.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerChampionSelectionDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerCredentialsDto.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerGameStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerLifetimeStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerParticipant.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerParticipantStatsSummary.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerStatSummaries.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PlayerStatSummary.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PointSummary.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PracticeGameConfig.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PracticeGameSearchResult.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\PublicSummoner.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\QueueDodger.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\QueueInfo.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\RawStat.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\RawStatDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\RecentGames.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Rune.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\RuneSlot.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\RuneType.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SearchingForMatchNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Session.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SimpleDialogMessage.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SimpleDialogMessageResponse.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SlotEntry.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SpellBookDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SpellBookPageDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\StartChampSelectDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\StoreFulfillmentNotification.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummaryAggStat.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummaryAggStats.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Summoner.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerActiveBoostsDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerCatalog.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerDefaultSpells.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerIcon.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerIconInventoryDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerLeagueItemsDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerLeaguesDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerLevel.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerLevelAndPoints.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerRune.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerRuneInventory.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\SummonerTalentsAndPoints.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\Talent.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TalentEntry.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TalentGroup.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TalentRow.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TeamAggregatedStatsDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TeamPlayerAggregatedStatsDTO.cs" />
+    <Compile Include="BananaLib\RiotObjects\Platform\TimeTrackedStat.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\CreatedTeam.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\MatchHistorySummary.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\PlayerDto.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\RosterDto.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamDto.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamId.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamInfo.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamMemberInfoDto.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamStatDetail.cs" />
+    <Compile Include="BananaLib\RiotObjects\Team\TeamStatSummary.cs" />
+    <Compile Include="BananaLib\UseGarenaAttribute.cs" />
+    <Compile Include="BananaLib\Utils.cs" />
+    <Compile Include="ezBot.Utils\Generator.cs" />
+    <Compile Include="ezBot\EnumerableExtensions.cs" />
+    <Compile Include="ezBot\Enums.cs" />
+    <Compile Include="ezBot\ezBot.cs" />
+    <Compile Include="ezBot\IniFile.cs" />
+    <Compile Include="ezBot\ITranslator.cs" />
+    <Compile Include="ezBot\Languages\PolishTranslator.cs" />
+    <Compile Include="ezBot\Languages\PortugueseTranslator.cs" />
+    <Compile Include="ezBot\Languages\TurkishTranslator.cs" />
+    <Compile Include="ezBot\Languages\KoreanTranslator.cs" />
+    <Compile Include="ezBot\Languages\FrenchTranslator.cs" />
+    <Compile Include="ezBot\Languages\EnglishTranslator.cs" />
+    <Compile Include="ezBot\Program.cs" />
+    <Compile Include="ezBot\QueueTypeId.cs" />
+    <Compile Include="ezBot\Tools.cs" />
+    <Compile Include="ezBot\WindowHandleInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rtmp-sharp\Complete\ExceptionalEventArgs.cs" />
+    <Compile Include="rtmp-sharp\Complete\IO\StreamHelper.cs" />
+    <Compile Include="rtmp-sharp\Complete\IO\Zlib\Adler32.cs" />
+    <Compile Include="rtmp-sharp\Complete\IO\Zlib\ZlibStream.cs" />
+    <Compile Include="rtmp-sharp\Complete\MethodFactory.cs" />
+    <Compile Include="rtmp-sharp\Complete\Threading\TaskCallbackManager`2.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\Amf0TypeMarkers.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0ArrayWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0AsObjectWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0BooleanWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0CharWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0DateTimeWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0EnumWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0GuidWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0NumberWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0ObjectWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0StringWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0XDocumentWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF0\AMFWriters\Amf0XElementWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\Amf3TypeMarkers.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3ArrayWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3AsObjectWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3BooleanWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3ByteArrayWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3CharWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3DateTimeWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3DoubleWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3EnumWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3GuidWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3IntWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3NativeByteArrayWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3ObjectWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3StringWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3VectorWriter`1.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3XDocumentWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\AMFWriters\Amf3XElementWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\ArrayCollection.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\ArrayCollectionConverter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\ByteArray.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\ByteArrayConverter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\DataInput.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\DataOutput.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\IDataInput.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\IDataOutput.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\IExternalizable.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AMF3\ObjectProxy.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AmfReader.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AmfWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AmfWriterMap.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AsObject.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\AsObjectConverter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ClassDescription.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\DeserializationStrategy.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\Extensions\Extensions.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\FallbackStrategy.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\IAmfItemWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\IMemberWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\IObjectWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\MiniTypeConverter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectEncoding.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectWrapperFactory.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectWrappers\AsObjectWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectWrappers\BasicObjectWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectWrappers\ExceptionWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\ObjectWrappers\ExternalizableWrapper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\Reflection.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\SerializationContext.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\SerializedNameAttribute.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\SerializerObjectFactory.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\StreamHelper.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\TransientAttribute.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\TypeConverters\StringConverter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\IO\Uuid.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\CommandMessageReceivedEventArgs.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\ConnectMessageEventArgs.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Abort.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Acknowledgement.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\AudioData.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\ByteData.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\CallStatus.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\ChunkSize.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Command.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Invoke.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\InvokeAmf0.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\InvokeAmf3.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Method.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\Notify.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\NotifyAmf0.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\NotifyAmf3.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\PeerBandwidth.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\UserControlMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\UserControlMessageType.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\VideoData.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Events\WindowAcknowledgementSize.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\InvocationException.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\MessageReceivedEventArgs.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\AcknowledgeMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\AcknowledgeMessageExt.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\AsyncMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\AsyncMessageExt.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\AsyncMessageHeaders.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\CommandMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\CommandOperation.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\ErrorMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\FlexMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\FlexMessageHeaders.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\Messages\RemotingMessage.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\RemotingMessageReceivedEventArgs.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Messaging\RtmpEvent.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\ChunkMessageHeaderType.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\ClientDisconnectedException.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\EventReceivedEventArgs.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\MessageType.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpClient.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpHandshake.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpHeader.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpPacket.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpPacketReader.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpPacketWriter.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpProxy.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpProxyRemote.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\RtmpProxySource.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\StatusAsObject.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\Net\StatusCode.cs" />
+    <Compile Include="rtmp-sharp\RtmpSharp\TypeSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BananaLib\bin\Debug\BananaLib.dll" />
+    <Content Include="BananaLib\bin\Debug\BananaLib.pdb" />
+    <Content Include="BananaLib\bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="BananaLib\bin\Debug\rtmp-sharp.dll" />
+    <Content Include="BananaLib\bin\Release\BananaLib.dll" />
+    <Content Include="BananaLib\bin\Release\BananaLib.pdb" />
+    <Content Include="BananaLib\bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="BananaLib\bin\Release\rtmp-sharp.dll" />
+    <Content Include="BananaLib\lib\Newtonsoft.Json.dll" />
+    <Content Include="BananaLib\lib\rtmp-sharp.dll" />
+    <Content Include="BananaLib\obj\Debug\BananaLib.csproj.FileListAbsolute.txt" />
+    <Content Include="BananaLib\obj\Debug\BananaLib.dll" />
+    <Content Include="BananaLib\obj\Debug\BananaLib.pdb" />
+    <Content Include="BananaLib\obj\Release\BananaLib.csproj.FileListAbsolute.txt" />
+    <Content Include="BananaLib\obj\Release\BananaLib.dll" />
+    <Content Include="BananaLib\obj\Release\BananaLib.pdb" />
+    <Content Include="ic_child_care_black_24dp_2x.ico" />
+    <Content Include="rtmp-sharp\bin\Debug\rtmp-sharp.dll" />
+    <Content Include="rtmp-sharp\bin\Debug\rtmp-sharp.pdb" />
+    <Content Include="rtmp-sharp\bin\Release\rtmp-sharp.dll" />
+    <Content Include="rtmp-sharp\bin\Release\rtmp-sharp.pdb" />
+    <Content Include="rtmp-sharp\obj\Debug\rtmp-sharp.csproj.FileListAbsolute.txt" />
+    <Content Include="rtmp-sharp\obj\Debug\rtmp-sharp.dll" />
+    <Content Include="rtmp-sharp\obj\Debug\rtmp-sharp.pdb" />
+    <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.csproj.FileListAbsolute.txt" />
+    <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.dll" />
+    <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.pdb" />
+    <Content Include="version.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BananaLib\obj\Debug\BananaLib.csprojResolveAssemblyReference.cache" />
+    <None Include="BananaLib\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="BananaLib\obj\Release\BananaLib.csprojResolveAssemblyReference.cache" />
+    <None Include="BananaLib\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="rtmp-sharp\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="rtmp-sharp\obj\Debug\rtmp-sharp.csprojResolveAssemblyReference.cache" />
+    <None Include="rtmp-sharp\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="rtmp-sharp\obj\Release\rtmp-sharp.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BananaLib\obj\Debug\TempPE\" />
+    <Folder Include="BananaLib\obj\Release\TempPE\" />
+    <Folder Include="rtmp-sharp\.vs\rtmp-sharp\v14\" />
+    <Folder Include="rtmp-sharp\obj\Debug\TempPE\" />
+    <Folder Include="rtmp-sharp\obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
