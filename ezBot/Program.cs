@@ -113,8 +113,7 @@ namespace ezBot
             var remoteVersion = LoadRemoteVersion();
             if (string.IsNullOrEmpty(EzBotVersion) || string.IsNullOrEmpty(remoteVersion) || EzBotVersion != remoteVersion)
             {
-                Process.Start("AutoUpdater.exe");
-                Environment.Exit(0);
+                Tools.ConsoleMessage("New update available at my github: https://github.com/fkingnoobgg", ConsoleColor.DarkRed);
             }
             
             LoadLeagueVersion();
@@ -127,11 +126,9 @@ namespace ezBot
             Tools.TitleMessage(string.Format(Translator.EzBot, LoLVersion.Substring(0, 4)));
             Tools.TitleMessage(Translator.By);
             Tools.TitleMessage(string.Format(Translator.Version, EzBotVersion));
-            Tools.ConsoleMessage("Skype: wisahesa", ConsoleColor.Magenta);
-            Tools.ConsoleMessage("Paypal: h3xc0r3@gmail.com", ConsoleColor.Magenta);
             Tools.ConsoleMessage(Translator.Support, ConsoleColor.Magenta);
             Tools.ConsoleMessage(Translator.Garena, ConsoleColor.Cyan);
-
+            Tools.ConsoleMessage("Hesa has a new bot here: https://www.hesabot.com/", ConsoleColor.Cyan);
             Tools.ConsoleMessage(Translator.SourceCode, ConsoleColor.Cyan);
             Tools.ConsoleMessage(Translator.Issues, ConsoleColor.Cyan);
 
@@ -242,7 +239,7 @@ namespace ezBot
                 webClient.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.BypassCache);
                 webClient.Headers.Add("Cache-Control", "no-cache");
 
-                return webClient.DownloadString("https://raw.githubusercontent.com/hesa2020/HesaElobuddy/master/eZ_Source/version.txt");
+                return webClient.DownloadString("https://raw.githubusercontent.com/fkingnoobgg/lolbot/master/version.txt");
             }
             catch (Exception ex)
             {
