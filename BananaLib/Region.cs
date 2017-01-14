@@ -14,11 +14,11 @@
         [FullName("Oceania"), GameServerAddress("prod.oc1.lol.riotgames.com"), LoginQueue("https://lqak.oc1.lol.riotgames.com/"), Locale("en_US"), UseGarena(false)] OCE,
         [FullName("Latin America North"), GameServerAddress("prod.la1.lol.riotgames.com"), LoginQueue("https://lqak.la1.lol.riotgames.com/"), Locale("en_US"), UseGarena(false)] LAN,
         [FullName("Latin America South"), GameServerAddress("prod.la2.lol.riotgames.com"), LoginQueue("https://lqak.la2.lol.riotgames.com/"), Locale("en_US"), UseGarena(false)] LAS,
-        [FullName("Japan"), GameServerAddress("prod.jp1.lol.riotgames.com"), LoginQueue("https://lqak.jp1.lol.riotgames.jp/"), Locale("ja_JP"), UseGarena(false)] JP,
+        [FullName("Japan"), GameServerAddress("prod.jp1.lol.riotgames.com"), LoginQueue("https://lq.jp1.lol.riotgames.jp/"), Locale("ja_JP"), UseGarena(false)] JP,
 
         [FullName("Singapore"), GameServerAddress("prod.lol.garenanow.com"), LoginQueue("https://lqak.lol.garenanow.com/"), UseGarena(true)] SG,
         [FullName("Malaysia"), GameServerAddress("prod.lol.garenanow.com"), LoginQueue("https://lqak.lol.garenanow.com/"), UseGarena(true)] MY,
-        [FullName("Singapore/Malaysia"), GameServerAddress("prod.lol.garenanow.com"), LoginQueue("https://lqak.lol.garenanow.com/"), Locale("en_US"), UseGarena(true)] SGMY,
+        [FullName("Singapore/Malaysia"), GameServerAddress("prod.lol.garenanow.com"), LoginQueue("https://lq.lol.garenanow.com/"), Locale("en_US"), UseGarena(true)] SGMY,
         [FullName("Taiwan"), GameServerAddress("prodtw1.lol.garenanow.com"), LoginQueue("https://lqtw1.lol.garenanow.com/"), Locale("en_US"), UseGarena(true)] TW,
         [FullName("Thailand"), GameServerAddress("prodth.lol.garenanow.com"), LoginQueue("https://lqth.lol.garenanow.com/"), Locale("en_US"), UseGarena(true)] TH,
         [FullName("Phillipines"), GameServerAddress("prodph.lol.garenanow.com"), LoginQueue("https://lqph.lol.garenanow.com/"), Locale("en_US"), UseGarena(true)] PH,
