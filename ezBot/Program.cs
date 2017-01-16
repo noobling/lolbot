@@ -124,13 +124,12 @@ namespace ezBot
 
             Console.Title = "ezBot";
             Tools.TitleMessage(string.Format(Translator.EzBot, LoLVersion.Substring(0, 4)));
-            Tools.TitleMessage(Translator.By);
+            Tools.TitleMessage("Made by Tryller and Hesa, maintained by fkingnoobgg");
             Tools.TitleMessage(string.Format(Translator.Version, EzBotVersion));
-            Tools.ConsoleMessage(Translator.Support, ConsoleColor.Magenta);
-            Tools.ConsoleMessage(Translator.Garena, ConsoleColor.Cyan);
+            Tools.ConsoleMessage("For help please PM me or use thread on elobuddy", ConsoleColor.Magenta);
+            Tools.ConsoleMessage("Garena needs fixing please report errors to me", ConsoleColor.Cyan);
             Tools.ConsoleMessage("Hesa has a new bot here: https://www.hesabot.com/", ConsoleColor.Cyan);
-            Tools.ConsoleMessage(Translator.SourceCode, ConsoleColor.Cyan);
-            Tools.ConsoleMessage(Translator.Issues, ConsoleColor.Cyan);
+            Tools.ConsoleMessage("Please report issue(s) on elobuddy or github", ConsoleColor.Cyan);
 
             if (!IsUserAdministrator() && replaceConfig)
             {
@@ -180,10 +179,10 @@ namespace ezBot
 
                             var region = Tools.ParseEnum<Region>(strArray[2].ToUpper());
                             var password = strArray[1];
-                            if (region.UseGarena())
-                            {
-                                password = GetGarenaToken();
-                            }
+                            //if (region.UseGarena())
+                            //{
+                            //    password = GetGarenaToken();
+                            //}
                             if (IsGameModeValid(queueType))
                             {
                                 ezBot ezBot = new ezBot(strArray[0], password, strArray[2].ToUpper(), queueType.ToUpper(), LoLVersion, isLeader);
