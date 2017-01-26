@@ -14,6 +14,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace ezBot
 {
@@ -327,9 +328,38 @@ namespace ezBot
             return commandLine.ToString();
         }
 
+        /*
+         * grab version from configs\version.txt otherwise get version from riot api abitrarily using region as NA 
+        */
         public static void LoadLeagueVersion()
         {
-            LoLVersion = File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "configs\\version.txt").ReadLine();
+            string vpath = AppDomain.CurrentDomain.BaseDirectory + "configs\\version.txt";
+            if (!File.Exists(vpath))
+            {
+                try
+                {
+                    WebClient webClient = new WebClient();
+                    // returned string is an array with all version of league since season 4
+                    var str = webClient.DownloadString("https://global.api.pvp.net/api/lol/static-data/na/v1.2/versions?api_key=RGAPI-4840c81c-2c7f-47bc-a370-11f73e20cf19");
+                    LoLVersion = str.Substring(2, 5);
+                    // lol version has to begin with 7 since it is season 7
+                    // if it does not, most likely a 4xx error code was returned
+                    if (!LoLVersion.Contains("7"))
+                    {
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Tools.ConsoleMessage(ex.Message, ConsoleColor.Red);
+                    Tools.Log(ex.StackTrace);
+                }
+            }
+            // manually setting lol version
+            else
+            {
+                LoLVersion = File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "configs\\version.txt").ReadLine();
+            }
+            
         }
 
         private static void ChangeGameConfig()
@@ -685,3 +715,4 @@ namespace ezBot
         }
     }
 }
+ 
