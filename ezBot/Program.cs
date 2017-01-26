@@ -346,6 +346,7 @@ namespace ezBot
                     // if it does not, most likely a 4xx error code was returned
                     if (!LoLVersion.Contains("7"))
                     {
+                        throw new Exception("Failed to get correct season 7 version from riot api");
                     }
                 }
                 catch (Exception ex)
