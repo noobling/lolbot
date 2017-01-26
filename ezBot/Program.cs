@@ -113,7 +113,7 @@ namespace ezBot
             var remoteVersion = LoadRemoteVersion();
             if (string.IsNullOrEmpty(EzBotVersion) || string.IsNullOrEmpty(remoteVersion) || EzBotVersion != remoteVersion)
             {
-                Tools.ConsoleMessage("New update available at my github: https://github.com/fkingnoobgg", ConsoleColor.DarkRed);
+                Tools.ConsoleMessage("New update available: https://github.com/fkingnoobgg/lolbot/releases (download the *.zip)", ConsoleColor.DarkRed);
             }
             
             LoadLeagueVersion();
