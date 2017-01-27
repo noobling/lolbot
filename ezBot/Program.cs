@@ -127,10 +127,10 @@ namespace ezBot
             Tools.TitleMessage(string.Format(Translator.EzBot, LoLVersion.Substring(0, 4)));
             Tools.TitleMessage("Made by Tryller and Hesa, maintained by fkingnoobgg");
             Tools.TitleMessage(string.Format(Translator.Version, EzBotVersion));
-            Tools.ConsoleMessage("For help please PM me or use thread on elobuddy", ConsoleColor.Magenta);
+            Tools.ConsoleMessage("Please use github page for issues/errors: https://github.com/fkingnoobgg/lolbot/issues ", ConsoleColor.Magenta);
             Tools.ConsoleMessage("Garena needs fixing please report errors to me", ConsoleColor.Cyan);
             Tools.ConsoleMessage("Hesa has a new bot here: https://www.hesabot.com/", ConsoleColor.Cyan);
-            Tools.ConsoleMessage("Please report issue(s) on elobuddy or github", ConsoleColor.Cyan);
+            Tools.ConsoleMessage("Official download link: https://sourceforge.net/projects/lolbot-executables/", ConsoleColor.Cyan);
 
             if (!IsUserAdministrator() && replaceConfig)
             {
