@@ -1,0 +1,7 @@
+1 Update champion list
+2. Fix bugs.
+3. Better exception handling
+4. Fix bot queue with friends
+5. Auto update on startup
+6. Account management tool
+Those for now.
