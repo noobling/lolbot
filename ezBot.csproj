@@ -444,9 +444,7 @@
     <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.csproj.FileListAbsolute.txt" />
     <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.dll" />
     <Content Include="rtmp-sharp\obj\Release\rtmp-sharp.pdb" />
-    <Content Include="version.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
